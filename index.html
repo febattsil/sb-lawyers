@@ -313,7 +313,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label" for="datepicker">Dia</label>
                                                             <div class="input-group">
-                                                                <input id="datepicker" name="datepicker" type="datetime" placeholder="Date" class="form-control" required>
+                                                                <input id="datepicker" type="datetime" placeholder="Date" class="form-control" required>
                                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                             </div>
                                                         </div>
@@ -526,6 +526,7 @@ function getPrices(d, callback) {
     var name = $("#name");
     var email = $("#email");
     var tel = $("#phone");
+    var city = "";
     isNotEmpty($("#city")) ? city = $("#city") : city = "Santa Cruz do Sul";
     var subject = $("#subject");
     var body = $("#body");
