@@ -1,0 +1,537 @@
+
+a {
+    color: white;
+}
+
+i {
+    margin-right: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+span {
+    font-family: 'Garamond', 'Times New Roman', serif; 
+    font-size: 22px;
+}
+
+input {
+    float: right;
+    margin-bottom: 50px;
+}
+
+textarea {
+    float: right;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 8;
+}
+
+#link-header {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 1px;
+    font-size: 1vw;
+}
+
+#link-mobile {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+label {
+      color: white;
+}
+
+small {
+    color: white;
+    padding: none;
+}
+
+#div-main {
+    display: flex;
+    padding: 10px 10px 200px 10px;
+    height: 100%;
+    font-size: 3vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#main-content-title {
+    font-size: 10vw;
+    display: flex;
+    justify-content: center;
+}
+
+#main-content-group{
+    font-style: italic;
+    color: white;
+    text-align: center;
+    background-color: black;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#main-content{
+    font-style: italic;
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+
+#main-content-text {
+    font-size: 16px;
+}
+
+#sbtext {
+    text-transform: uppercase;
+    font-family: verdana;
+    font-weight: 700;
+    color: yellow;
+    text-shadow: 1px 1px 1px goldenrod,
+        1px 2px 1px orange,
+        1px 3px 1px orange,
+        1px 4px 1px orange,
+        1px 5px 1px orange,
+        1px 6px 1px orange,
+        1px 7px 1px orange,
+        1px 8px 1px orange,
+        1px 9px 1px orange,
+        1px 10px 1px orange,
+    1px 18px 6px rgba(255,255,255,0.4),
+    1px 22px 10px rgba(255,255,255,0.2),
+    1px 25px 35px rgba(255,255,255,0.2),
+    1px 30px 60px rgba(255,255,255,0.4);
+}
+
+#location-legend {
+    font-size: 3vw;
+    text-align: left;
+    margin-left: 6.3%;
+    color: white;
+    text-shadow: 1px 1px 1px white,
+        1px 2px 1px gray,
+        1px 3px 1px gray,
+        1px 4px 1px gray,
+        1px 5px 1px darkgray,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 0%;
+    margin-left: 0%;
+}
+  
+.responsive-iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.btn-outline-secondary {
+    font-size: 16;
+    border-radius: 0%;
+    padding: 12px 28px;
+}
+
+.parallax {
+    background-image: url("court.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.serv-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#serv-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-adv {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    padding: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    flex-direction: column;
+    outline: solid 2px black;
+    font-family: sans-serif;
+    align-content: space-around;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.imgservice {
+    padding: 2px;
+    outline:solid 2px black;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.txt-org {
+    text-align: left;
+    font-size: 1.5vw;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+    height: 30%;
+}
+
+.btnAgendar {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.booking-option {
+    display: flex;
+    margin-right: 50%;
+}
+
+#contact-group {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    font-size: 2vw;
+}
+
+#contact {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    align-items: stretch;
+}
+
+#contact-title {
+    display: flexbox;
+    text-align: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#myLinks {
+    display: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#liLinks {
+    display: none;
+}
+
+#div-video {
+    width: 80%;
+    height: 100%;
+}
+
+#frame-div-location {
+    width: 50%;
+}
+
+#frame-div-video {
+    width: 50%;
+}
+
+@media (max-width: 990px){
+
+        #myLinks {
+            display: auto;
+            margin-top: 20px;
+        }
+
+        #liLinks {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        #link-mobile {
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 14px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: right;
+        }
+}
+
+@media (max-width: 576px) {
+
+        i {
+            margin-right: 10px;
+        }
+
+        #div-main {
+            flex-direction: column;
+            padding: 10px 10px 100px 10px;
+            align-items: center;
+        }
+
+        #div-video {
+            width: 100%;
+            height: 100%;
+        }
+
+        #frame-div-location {
+            width: 100%;
+        }
+
+        #frame-div-video {
+            width: 100%;
+        }
+
+        #link-mobile {
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #liLinks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #navbar-brand {
+            display: inline-table;
+            align-content: center;
+            width: 100%;
+        }
+
+        #contact-group {
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            font-size: 5vw;
+        }
+        
+        #contact {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        
+        #contact-title {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            text-align: left;
+        }
+
+        .responsive-iframe {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .serv-div {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            justify-content: space-around;
+        }
+        
+        #main-content-title {
+            font-size: 10vw;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #main-content-group{
+            font-style: italic;
+            color: white;
+            text-align: center;
+            background-color: black;
+            padding-top: 10%;
+            padding-bottom: 10%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        #main-content{
+            font-style: italic;
+            color: white;
+            text-align: center;
+            background-color: black;
+        }
+        
+        #serv-group {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        #main-content-text {
+            font-size: 16px;
+        }
+        
+        #location-legend {
+            font-size: 5vw;
+            text-align: left;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 0%;
+            color: white;
+            text-shadow: 1px 1px 1px white,
+                1px 2px 1px gray,
+                1px 3px 1px gray,
+                1px 4px 1px gray,
+                1px 5px 1px darkgray,
+            1px 18px 6px rgba(16,16,16,0.4),
+            1px 22px 10px rgba(16,16,16,0.2),
+            1px 25px 35px rgba(16,16,16,0.2),
+            1px 30px 60px rgba(16,16,16,0.4);
+        }
+
+        #div-main {
+            flex-direction: column;
+            padding: 10px 10px 100px 10px;
+            align-items: center;
+        }
+        
+        .container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            padding-top: 0%;
+            margin-left: 0%;
+            padding: 0;
+            justify-items: center;
+        }
+          
+        .responsive-iframe {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+        }
+        
+        .btn-outline-secondary {
+            font-size: 16;
+            border-radius: 0%;
+            padding: 12px 28px;
+        }
+        
+        .parallax {
+            background-image: url("court.jpg");
+            min-height: 500px; 
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .service-adv {
+            background-color: rgba(255, 255, 255, 0.3);
+            display: flex;
+            width: 100%;
+            padding: 0px;
+            margin-bottom: 2%;
+            margin-top: 2%;
+            flex-direction: column;
+            outline: solid 2px black;
+            font-family: sans-serif;
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+        
+        .imgservice {
+            padding: 2px;
+            outline:solid 2px black;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .txt-org {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: center;
+            font-size: 5vw;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px black;
+        }
+        
+        .btnAgendar {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 200%;
+            font-weight: bold;
+            width: 100%;
+        }
+        
+        .booking-option {
+            display: flex;
+            margin-right: 0%;
+        }
+        
+        #sbtext {
+            text-transform: uppercase;
+            font-family: verdana;
+            font-weight: 700;
+            color: yellow;
+            text-shadow: 1px 1px 1px goldenrod,
+                1px 2px 1px orange,
+                1px 3px 1px orange,
+                1px 4px 1px orange,
+                1px 5px 1px orange,
+                1px 6px 1px orange,
+                1px 7px 1px orange,
+                1px 8px 1px orange,
+                1px 9px 1px orange,
+                1px 10px 1px orange,
+            1px 18px 6px rgba(255,255,255,0.4),
+            1px 22px 10px rgba(255,255,255,0.2),
+            1px 25px 35px rgba(255,255,255,0.2),
+            1px 30px 60px rgba(255,255,255,0.4);
+        }
+}
