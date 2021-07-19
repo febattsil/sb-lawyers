@@ -76,7 +76,7 @@ small {
     font-size: 10vw;
     display: flex;
     justify-content: center;
-    align-content: center;
+    text-align: center;
 }
 
 #main-content-group{
