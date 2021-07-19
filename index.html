@@ -94,7 +94,7 @@
                                 <div class="row">
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30">
                                                     <div class="tour-booking-form">
-                                                        <form method="post" action="mailLawyer.php">
+                                                        <form method="post" action="sendEmail()">
                                                             <div class="row">
                                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                                                     <h4 class="tour-form-title">Agendamento</h4>
@@ -103,7 +103,7 @@
                                                                     <div class="form-group">
                                                                         <label class="control-label required" for="select">Advogado(a)</label>
                                                                         <div class="select">
-                                                                            <select id="select" name="selAdv" class="form-control">
+                                                                            <select id="selAdv" class="form-control">
                                                                                 <option value="">Selecione...</option>
                                                                                 <option value="w">William Battisti</option>
                                                                                 <option value="m">Maria Severiano</option>
@@ -115,7 +115,7 @@
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="datepicker">Dia</label>
                                                                         <div class="input-group">
-                                                                            <input id="datepicker" name="datetime" type="datetime" placeholder="Date" class="form-control" required>
+                                                                            <input id="datepicker" type="datetime" placeholder="Date" class="form-control" required>
                                                                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                                         </div>
                                                                     </div>
@@ -124,7 +124,7 @@
                                                                     <div class="form-group">
                                                                         <label class="control-label required" for="select">Número de pessoas que participarão <br> (Máx. 3 pessoas por consulta)</label>
                                                                         <div class="select">
-                                                                            <select id="select" name="selClients" class="form-control">
+                                                                            <select id="selClients" class="form-control">
                                                                                 <option value="">Selecione...</option>
                                                                                 <option value="1">1</option>
                                                                                 <option value="2">2</option>
@@ -139,30 +139,30 @@
                                                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="name">Nome</label>
-                                                                        <input id="name" type="text" name="name" placeholder="Digite aqui..." class="form-control" required>
+                                                                        <input id="name" type="text" placeholder="Digite aqui..." class="form-control" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="email"> Email</label>
-                                                                        <input id="email" type="text" name="email" placeholder="xxxx@xxxx.xxx" class="form-control" required>
+                                                                        <input id="email" type="text" placeholder="xxxx@xxxx.xxx" class="form-control" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="phone"> Telefone/Celular</label>
-                                                                        <input id="phone" type="text" name="phone" placeholder="(51) 99999-9999" class="form-control" required>
+                                                                        <input id="phone" type="text" placeholder="(51) 99999-9999" class="form-control" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="city">Cidade onde mora</label>
-                                                                        <input id="city" type="text" name="city" placeholder="Cidade" class="form-control" required>
+                                                                        <input id="city" type="text" placeholder="Cidade" class="form-control" required>
                                                                     </div>
                                                                 </div>
                                                                 </div>
                                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 20px;">
-                                                                    <button type="submit" name="direitoprevidenciario" class="btn btn-primary">ENVIAR</button>
+                                                                    <button type="submit" class="btn btn-primary" onclick="sendEmail()" value="send An Email">ENVIAR</button>
                                                                 </div>
                                                         </form>
                                                     </div>
@@ -193,7 +193,7 @@
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30">
                                         <div class="tour-booking-form">
-                                            <form method="post" name="myemailform" action="mailLawyer.php">
+                                            <form method="post" name="myemailform" action="sendEmail()">
                                                 <div class="row">
                                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                                         <h4 class="tour-form-title">Agendamento</h4>
@@ -202,7 +202,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label required" for="select">Advogado(a)</label>
                                                             <div class="select">
-                                                                <select id="select" name="selAdv" class="form-control">
+                                                                <select id="selAdv" class="form-control">
                                                                     <option value="">Selecione...</option>
                                                                     <option value="w">William Battisti</option>
                                                                     <option value="m">Maria Severiano</option>
@@ -214,7 +214,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label" for="datepicker">Dia</label>
                                                             <div class="input-group">
-                                                                <input id="datepicker" name="datepicker" type="datetime" placeholder="Date" class="form-control" required>
+                                                                <input id="datepicker" type="datetime" placeholder="Date" class="form-control" required>
                                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                             </div>
                                                         </div>
@@ -223,7 +223,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label required" for="select">Número de pessoas que participarão <br> (Máx. 3 pessoas por consulta)</label>
                                                             <div class="select">
-                                                                <select id="select" name="selclients" class="form-control">
+                                                                <select id="selclients" class="form-control">
                                                                     <option value="">Selecione...</option>
                                                                     <option value="1">1</option>
                                                                     <option value="2">2</option>
@@ -238,32 +238,32 @@
                                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="name">Nome</label>
-                                                            <input id="name" type="text" name="name" placeholder="Digite aqui..." class="form-control" required>
+                                                            <input id="name" type="text" placeholder="Digite aqui..." class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="email"> Email</label>
-                                                            <input id="email" type="text" name="email" placeholder="xxxx@xxxx.xxx" class="form-control" required>
+                                                            <input id="email" type="text" placeholder="xxxx@xxxx.xxx" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="phone"> Telefone/Celular</label>
-                                                            <input id="phone" type="text" name="phone" placeholder="(51) 99999-9999" class="form-control" required>
+                                                            <input id="phone" type="text" placeholder="(51) 99999-9999" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="city">Cidade onde mora</label>
-                                                            <input id="city" type="text" name="city" placeholder="Santa Cruz do Sul" class="form-control" required>
+                                                            <input id="city" type="text" placeholder="Santa Cruz do Sul" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     </div>
                                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 20px;">
-                                                        <button type="submit" name="singlebutton" class="btn btn-primary">ENVIAR</button>
+                                                        <button type="submit" class="btn btn-primary" onclick="sendEmail()" value="send An Email">ENVIAR</button>
                                                     </div>
-                                            </form type="submit" value="Send Form">
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -292,7 +292,7 @@
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30">
                                         <div class="tour-booking-form">
-                                            <form method="post" name="direitobancario" action="mailLawyer.php">
+                                            <form method="post" name="direitobancario" action="sendEmail()">
                                                 <div class="row">
                                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                                         <h4 class="tour-form-title">Agendamento</h4>
@@ -301,7 +301,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label required" for="select">Advogado(a)</label>
                                                             <div class="select">
-                                                                <select id="select" name="selAdv" class="form-control">
+                                                                <select id="selAdv" class="form-control">
                                                                     <option value="">Selecione...</option>
                                                                     <option value="w">William Battisti</option>
                                                                     <option value="m">Maria Severiano</option>
@@ -322,7 +322,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label required" for="select">Número de pessoas que participarão <br> (Máx. 3 pessoas por consulta)</label>
                                                             <div class="select">
-                                                                <select id="select" name="selclients" class="form-control">
+                                                                <select id="selclients" class="form-control">
                                                                     <option value="">Selecione...</option>
                                                                     <option value="1">1</option>
                                                                     <option value="2">2</option>
@@ -337,32 +337,32 @@
                                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="name">Nome</label>
-                                                            <input id="name" type="text" name="name" placeholder="Digite aqui..." class="form-control" required>
+                                                            <input id="name" type="text" placeholder="Digite aqui..." class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="email"> Email</label>
-                                                            <input id="email" type="text" name="email" placeholder="xxxx@xxxx.xxx" class="form-control" required>
+                                                            <input id="email" type="text" placeholder="xxxx@xxxx.xxx" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="phone"> Telefone/Celular</label>
-                                                            <input id="phone" type="text" name="phone" placeholder="(51) 99999-9999" class="form-control" required>
+                                                            <input id="phone" type="text" placeholder="(51) 99999-9999" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="city">Cidade onde mora</label>
-                                                            <input id="city" type="text" name="city" placeholder="Santa Cruz do Sul" class="form-control" required>
+                                                            <input id="city" type="text" placeholder="Santa Cruz do Sul" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     </div>
                                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 20px;">
-                                                        <button type="submit" name="sendform" class="btn btn-primary">ENVIAR</button>
+                                                        <button type="submit" class="btn btn-primary" onclick="sendEmail()" value="send An Email">ENVIAR</button>
                                                     </div>
-                                            </form>
+                                            </form id="myForm">
                                         </div>
                                     </div>
                                 </div>
@@ -380,7 +380,7 @@
                     <h1 style="font-family: serif; color: white;">ENTRE EM CONTATO</h1>
                     <p style="color: white;">Rua Fernando Abott, 737, Centro, Santa Cruz do Sul/RS</p>
                     <div id="serv-div">
-                        <a href="mailto:atendimentosbadvogados@gmail.com" style="color: white;">atendimentosbadvogados@gmail.com</a>
+                        <a href="mailto:recepcao.sbadvogados@gmail.com" style="color: white;">recepcao.sbadvogados@gmail.com</a>
                         <a href="tel:51-3902-5445" style="color: white;">(51)3902-5445</a>
                     </div>
                     <div style="display: flex; justify-content:space-evenly; margin-top: 30px;">
@@ -518,6 +518,50 @@ function getPrices(d, callback) {
         callback({ labels: labels, invalid: invalid });
     }, 'jsonp');
 }
+        
+ function sendEmail() {
+    var lawyer = $("#selAdv");
+    var date = $('#datePicker');
+    var clientes = $("#selclients");
+    var name = $("#name");
+    var email = $("#email");
+    var tel = $("#phone");
+    isNotEmpty($("#city")) ? var city = $("#city") : var city = "Santa Cruz do Sul";
+    var subject = $("#subject");
+    var body = $("#body");
+     
+    if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+        $.ajax({
+           url: 'mailLawyer.php',
+           method: 'POST',
+           dataType: 'json',
+           data: {
+               lawyer: lawyer.val(),
+               date: date.val(),
+               clientes: clientes.val(),
+               name: name.val(),
+               email: email.val(),
+               tel: tel.val(),
+               city: city.val(),
+               subject: subject.val(),
+               body: body.val()
+           }, success: function (response) {
+                $('#myForm')[0].reset();
+                $('.sent-notification').text("Solicitação Enviada. Aguarde a resposta de confirmação.");
+           }
+        });
+    }
+}
+
+function isNotEmpty(caller) {
+    if (caller.val() == "") {
+        caller.css('border', '1px solid red');
+        return false;
+    } else
+        caller.css('border', '');
+
+    return true;
+    }
 
     </script>
 
