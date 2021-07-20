@@ -1,5 +1,5 @@
 <?php
-use PHPMailer;
+use PHPMailer/PHPMailer;
 
 if(isset($_POST['name']) && isset($_POST['email'])){
     $name = $_POST['name'];
@@ -18,7 +18,7 @@ if(isset($_POST['name']) && isset($_POST['email'])){
     $mail->Host = "smtp.gmail.com";
     $mail->SMTPAuth = true;
     $mail->Username = "fernandobattisti94@gmail.com";
-    $mail->Password = 'Magnetasa3826649';
+    $mail->Password = 'magnetasa3826649';
     $mail->Port = 465;
     $mail->SMTPSecure = "ssl";
 
