@@ -8,7 +8,6 @@
     <link href="mystyle.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <script src="https://cdn.jsdelivr.net/npm/tween.js@16.3.4"></script>
-    
 
 </head>
 <body>
@@ -27,7 +26,8 @@
                     <a id="link-header" href="#serv-group"><i class="far fa-calendar-alt"></i>Agende Online |</a>
                     <a id="link-header" href="mailto:recepcao.sbadvogados@gmail.com"><i class="fas fa-inbox"></i>recepcao.sbadvogados@gmail.com |</a>
                     <a id="link-header" href="tel:51-3902-5445"><i class="fas fa-phone"></i>(51)3902-5445 |</a>
-                    <a id="link-header" href=""><i class="fab fa-facebook"></i></a>
+                    <a id="link-header" href="https://www.facebook.com/sbadvogadosscs/"><i class="fab fa-facebook"></i></a>
+                    <a id="link-mobile" href="https://www.youtube.com/channel/UCNoPnRIOOftL-BEhwrIaOJQ"><i class="fab fa-youtube fa-lg"></i></a>
                 </li>
             </div>
             <div class="topnav">
@@ -36,7 +36,8 @@
                         <a id="link-mobile" href="#serv-group"><i class="far fa-calendar-alt"></i>Agende Online</a>
                         <a id="link-mobile" href="mailto:recepcao.sbadvogados@gmail.com"><i class="fas fa-inbox"></i>e-mail</a>
                         <a id="link-mobile" href="tel:51-3902-5445"><i class="fas fa-phone"></i>(51)3902-5445</a>
-                        <a id="link-mobile" href=""><i class="fab fa-facebook fa-lg"></i></a>
+                        <a id="link-mobile" href="https://www.facebook.com/sbadvogadosscs/"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a id="link-mobile" href="https://www.youtube.com/channel/UCNoPnRIOOftL-BEhwrIaOJQ"><i class="fab fa-youtube fa-lg"></i></a>
                     </li>
                 </div>
                 <button href="javascript:void(0);" class="navbar-toggler" onclick="myFunction()" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +49,9 @@
     <main>
         <div class="parallax"></div>
         <div id="main-content">
+            <div id="note" name="note"></div>
             <div id="main-content-group">
+                <div class="sent-notification"></div>
                 <div id="main-content-title">
                     <div style="margin-right: 20px"><img style="height: 20vw; width: 20vw;" src="logoMain.jpeg"></div>
                     <div>ADVOGADOS</div>
@@ -95,7 +98,7 @@
                                 <div class="row">
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30">
                                                     <div class="tour-booking-form">
-                                                        <form method="post" action="sendEmail()">
+                                                        <form id="myForm" method="post">
                                                             <div class="row">
                                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                                                     <h4 class="tour-form-title">Agendamento</h4>
@@ -104,10 +107,10 @@
                                                                     <div class="form-group">
                                                                         <label class="control-label required" for="select">Advogado(a)</label>
                                                                         <div class="select">
-                                                                            <select id="selAdv" class="form-control">
+                                                                            <select id="select" name="selAdv" class="form-control">
                                                                                 <option value="">Selecione...</option>
-                                                                                <option value="w">William Battisti</option>
-                                                                                <option value="m">Maria Severiano</option>
+                                                                                <option value="William Battisti">William Battisti</option>
+                                                                                <option value="Maria Severiano">Maria Severiano</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -116,7 +119,7 @@
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="datepicker">Dia</label>
                                                                         <div class="input-group">
-                                                                            <input id="datepicker" type="datetime" placeholder="Date" class="form-control" required>
+                                                                            <input id="datepicker" name="datepicker" type="datetime" placeholder="Date" class="form-control" required>
                                                                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                                         </div>
                                                                     </div>
@@ -125,11 +128,11 @@
                                                                     <div class="form-group">
                                                                         <label class="control-label required" for="select">Número de pessoas que participarão <br> (Máx. 3 pessoas por consulta)</label>
                                                                         <div class="select">
-                                                                            <select id="selClients" class="form-control">
+                                                                            <select id="select" name="selClients" class="form-control">
                                                                                 <option value="">Selecione...</option>
-                                                                                <option value="1">1</option>
-                                                                                <option value="2">2</option>
-                                                                                <option value="3">3</option>
+                                                                                <option value="1 pessoa">1</option>
+                                                                                <option value="2 pessoas">2</option>
+                                                                                <option value="3 pessoas">3</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -140,30 +143,30 @@
                                                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="name">Nome</label>
-                                                                        <input id="name" type="text" placeholder="Digite aqui..." class="form-control" required>
+                                                                        <input id="name" type="text" name="name" placeholder="Digite aqui..." class="form-control" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="email"> Email</label>
-                                                                        <input id="email" type="text" placeholder="xxxx@xxxx.xxx" class="form-control" required>
+                                                                        <input id="email" type="text" name="email" placeholder="xxxx@xxxx.xxx" class="form-control" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="phone"> Telefone/Celular</label>
-                                                                        <input id="phone" type="text" placeholder="(51) 99999-9999" class="form-control" required>
+                                                                        <input id="phone" type="text" name="phone" placeholder="(51) 99999-9999" class="form-control" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="city">Cidade onde mora</label>
-                                                                        <input id="city" type="text" placeholder="Cidade" class="form-control" required>
+                                                                        <input id="city" type="text" name="city" placeholder="Cidade" class="form-control" required>
                                                                     </div>
                                                                 </div>
                                                                 </div>
                                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 20px;">
-                                                                    <button type="submit" class="btn btn-primary" onclick="sendEmail()" value="send An Email">ENVIAR</button>
+                                                                    <button type="submit" id="btn-send" name="subject" class="btn btn-primary" value="DIREITO PREVIDENCIÁRIO" onclick="sendEmail()">ENVIAR</button>
                                                                 </div>
                                                         </form>
                                                     </div>
@@ -189,12 +192,13 @@
                         </div>
                     </div>
                     <div id="direito-trabalho"  style="display:none;">
+                    <script> var servico = "Direito do Trabalho"; </script>
                         <div class="content">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30">
                                         <div class="tour-booking-form">
-                                            <form method="post" name="myemailform" action="sendEmail()">
+                                            <form id="myForm" method="post">
                                                 <div class="row">
                                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                                         <h4 class="tour-form-title">Agendamento</h4>
@@ -203,10 +207,10 @@
                                                         <div class="form-group">
                                                             <label class="control-label required" for="select">Advogado(a)</label>
                                                             <div class="select">
-                                                                <select id="selAdv" class="form-control">
+                                                                <select id="select" name="selAdv" class="form-control">
                                                                     <option value="">Selecione...</option>
-                                                                    <option value="w">William Battisti</option>
-                                                                    <option value="m">Maria Severiano</option>
+                                                                    <option value="William Battisti">William Battisti</option>
+                                                                    <option value="Maria Severiano">Maria Severiano</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -215,7 +219,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label" for="datepicker">Dia</label>
                                                             <div class="input-group">
-                                                                <input id="datepicker" type="datetime" placeholder="Date" class="form-control" required>
+                                                                <input id="datepicker demo-booking-single" name="datepicker" type="datetime" placeholder="Date" class="form-control" required>
                                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                             </div>
                                                         </div>
@@ -224,7 +228,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label required" for="select">Número de pessoas que participarão <br> (Máx. 3 pessoas por consulta)</label>
                                                             <div class="select">
-                                                                <select id="selclients" class="form-control">
+                                                                <select id="select" name="selClients" class="form-control">
                                                                     <option value="">Selecione...</option>
                                                                     <option value="1">1</option>
                                                                     <option value="2">2</option>
@@ -239,30 +243,30 @@
                                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="name">Nome</label>
-                                                            <input id="name" type="text" placeholder="Digite aqui..." class="form-control" required>
+                                                            <input id="name" type="text" name="name" placeholder="Digite aqui..." class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="email"> Email</label>
-                                                            <input id="email" type="text" placeholder="xxxx@xxxx.xxx" class="form-control" required>
+                                                            <input id="email" type="text" name="email" placeholder="xxxx@xxxx.xxx" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="phone"> Telefone/Celular</label>
-                                                            <input id="phone" type="text" placeholder="(51) 99999-9999" class="form-control" required>
+                                                            <input id="phone" type="text" name="phone" placeholder="(51) 99999-9999" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                                         <div class="form-group">
                                                             <label class="control-label" for="city">Cidade onde mora</label>
-                                                            <input id="city" type="text" placeholder="Santa Cruz do Sul" class="form-control" required>
+                                                            <input id="city" type="text" name="city" placeholder="Santa Cruz do Sul" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     </div>
                                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 20px;">
-                                                        <button type="submit" class="btn btn-primary" onclick="sendEmail()" value="send An Email">ENVIAR</button>
+                                                        <button type="submit" id="btn-send" name="subject" class="btn btn-primary" value="DIREITO DO TRABALHO" onclick="sendEmail()">ENVIAR</button>
                                                     </div>
                                             </form>
                                         </div>
@@ -293,7 +297,7 @@
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30">
                                         <div class="tour-booking-form">
-                                            <form method="post" name="direitobancario" action="sendEmail()">
+                                            <form id="myForm" method="post">
                                                 <div class="row">
                                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                                         <h4 class="tour-form-title">Agendamento</h4>
@@ -302,10 +306,10 @@
                                                         <div class="form-group">
                                                             <label class="control-label required" for="select">Advogado(a)</label>
                                                             <div class="select">
-                                                                <select id="selAdv" class="form-control">
+                                                                <select id="selAdv" name="selAdv" class="form-control">
                                                                     <option value="">Selecione...</option>
-                                                                    <option value="w">William Battisti</option>
-                                                                    <option value="m">Maria Severiano</option>
+                                                                    <option value="William Battisti">William Battisti</option>
+                                                                    <option value="Maria Severiano">Maria Severiano</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -314,7 +318,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label" for="datepicker">Dia</label>
                                                             <div class="input-group">
-                                                                <input id="datepicker" type="datetime" placeholder="Date" class="form-control" required>
+                                                                <input id="datepicker" name="datepicker" type="datetime" placeholder="Date" class="form-control" required>
                                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                             </div>
                                                         </div>
@@ -323,7 +327,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label required" for="select">Número de pessoas que participarão <br> (Máx. 3 pessoas por consulta)</label>
                                                             <div class="select">
-                                                                <select id="selclients" class="form-control">
+                                                                <select id="selClients"name="selClients" class="form-control">
                                                                     <option value="">Selecione...</option>
                                                                     <option value="1">1</option>
                                                                     <option value="2">2</option>
@@ -361,9 +365,9 @@
                                                     </div>
                                                     </div>
                                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 20px;">
-                                                        <button type="submit" class="btn btn-primary" onclick="sendEmail()" value="send An Email">ENVIAR</button>
+                                                        <button type="submit" id="btn-send" name="subject" value="DIREITO BANCÁRIO" class="btn btn-primary" onclick="sendEmail()">ENVIAR</button>
                                                     </div>
-                                            </form id="myForm">
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -379,20 +383,20 @@
             <div id="contact">
                 <div id="contact-title">
                     <h1 style="font-family: serif; color: white;">ENTRE EM CONTATO</h1>
-                    <p style="color: white;">Rua Fernando Abott, 520, Centro, Santa Cruz do Sul/RS</p>
+                    <p style="color: white;">Rua Fernando Abott, 737, Centro, Santa Cruz do Sul/RS</p>
                     <div id="serv-div">
                         <a href="mailto:recepcao.sbadvogados@gmail.com" style="color: white;">recepcao.sbadvogados@gmail.com</a>
                         <a href="tel:51-3902-5445" style="color: white;">(51)3902-5445</a>
                     </div>
                     <div style="display: flex; justify-content:space-evenly; margin-top: 30px;">
-                        <a href="" style="color: white;"><i class="fab fa-youtube fa-5x"></i></a>
-                        <a href="" style="color: white;"><i class="fab fa-facebook fa-5x"></i></a>
+                        <a href="https://www.youtube.com/channel/UCNoPnRIOOftL-BEhwrIaOJQ" style="color: white;"><i class="fab fa-youtube fa-5x"></i></a>
+                        <a href="https://www.facebook.com/sbadvogadosscs/" style="color: white;"><i class="fab fa-facebook fa-5x"></i></a>
                     </div>
                 </div>
-                <div id="contact-form">
+                <div id="contact-form" method="post">
                     <div id="serv-div">
                         <label for="">Nome:</label>
-                        <input type="text" id="nclient" name="nclient" placeholder="Seu nome..">
+                        <input type="text" id="name" name="name" placeholder="Seu nome..">
                     </div>
                     <small class="form-text">Não vamos compartilhar seus dados com ninguém.</small>
                     <div id="serv-div">
@@ -401,18 +405,18 @@
                     </div>
                     <div id="serv-div">
                         <label for="">Telefone:</label>
-                        <input type="text" id="phone" name="telephone" placeholder="Seu telefone..">
+                        <input type="text" id="phone" name="phone" placeholder="Seu telefone..">
                     </div>
                     <div id="serv-div">
                         <label for="">Endereço:</label>
-                        <input type="text" id="addr" name="address" placeholder="Seu endereço..">
+                        <input type="text" id="city" name="city" placeholder="Seu endereço..">
                     </div>
                     <div id="serv-div">
                         <label for="">Assunto:</label>
-                        <textarea type="text" id="sub" name="subject" style="border-radius: 3px;" placeholder="Digite a sua mensagem aqui.."></textarea>
+                        <textarea type="text" id="body" name="txtCliente" style="border-radius: 3px;" placeholder="Digite a sua mensagem aqui.."></textarea>
                     </div>
                     <div style="text-align: right; margin-top: 10px;">
-                        <input type="submit" value="Enviar">
+                        <button id="btn-send" type="submit" name="subject" onclick="sendEmail()"  class="btn btn-primary" value="SAC CLIENTE">ENVIAR</button>
                     </div>
                 </div>
             </div>
@@ -474,65 +478,21 @@
                 document.getElementById('agbtn-3').style.display = "flex";
                 document.getElementById('back-3').style.display = "none";
         }
-    }
-
-    function focusOnElement(element_id) {
-        $(element_id).goTo();
-    }
-
-    var min = '2021-06-21T00:00';
-var max = '2021-12-21T00:00';
-
-mobiscroll.datepicker('#demo-booking-single', {
-    controls: ['calendar'],
-    min: min,
-    max: max,
-    onPageLoading: function (event, inst) {
-        getPrices(event.firstDay, function callback(bookings) {
-            inst.setOptions({
-                labels: bookings.labels,
-                invalid: bookings.invalid
-            });
-        });
-    }
-});
-                                  
-function getPrices(d, callback) {
-    var invalid = [],
-        labels = [];
-
-    mobiscroll.util.http.getJson('//trial.mobiscroll.com/getprices/?year=' + d.getFullYear() + '&month=' + d.getMonth(), function (bookings) {
-        for (var i = 0; i < bookings.length; ++i) {
-            var booking = bookings[i],
-                d = new Date(booking.d);
-
-            if (booking.price > 0) {
-                labels.push({
-                    start: d,
-                    title: '$' + booking.price,
-                    textColor: '#e1528f'
-                });
-            } else {
-                invalid.push(d);
-            }
-        }
-        callback({ labels: labels, invalid: invalid });
-    }, 'jsonp');
-}
+    }                               
         
- function sendEmail() {
+function sendEmail() {
     var lawyer = $("#selAdv");
-    var date = $('#datePicker');
-    var clientes = $("#selclients");
+    var date = $('#datepicker');
+    var clientes = $("#selClients");
     var name = $("#name");
     var email = $("#email");
     var tel = $("#phone");
-    var city = "";
-    isNotEmpty($("#city")) ? city = $("#city") : city = "Santa Cruz do Sul";
-    var subject = $("#subject");
-    var body = $("#body");
+    var city = $("#city");
+    var subject = $("#btn-send");
+    if(isNotEmpty($("#body")))
+    var txtCliente = $("#body");
      
-    if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+    if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject)) {
         $.ajax({
            url: 'mailLawyer.php',
            method: 'POST',
@@ -546,10 +506,13 @@ function getPrices(d, callback) {
                tel: tel.val(),
                city: city.val(),
                subject: subject.val(),
-               body: body.val()
+               txt: txtCliente.val()
            }, success: function (response) {
                 $('#myForm')[0].reset();
-                $('.sent-notification').text("Solicitação Enviada. Aguarde a resposta de confirmação.");
+                alert("Solicitação Enviada. Aguarde a resposta de confirmação.");
+           }, error: function (response){
+                $('#myForm')[0].reset();
+                alert("Erro no envio. Tente novamente");
            }
         });
     }
@@ -564,7 +527,6 @@ function isNotEmpty(caller) {
 
     return true;
     }
-
     </script>
 
 </body>
